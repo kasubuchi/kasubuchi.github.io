@@ -1,0 +1,65 @@
+/* Shares the colour tokens and fonts of the paper explainer site (kasubuchi.github.io/wavephasenet). */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8fc;
+  --border: #d3d8ea;
+  --accent: #0088aa;
+  --text: #101728;
+  --text-muted: #414a63;
+  --text-dim: #6b7591;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.wrapper { max-width: 760px; margin: 0 auto; padding: 3.5rem 2rem 4rem; }
+
+.lang { text-align: right; font-family: var(--font-mono); font-size: 0.8rem; }
+.lang a { color: var(--text-dim); text-decoration: none; }
+.lang a:hover { color: var(--accent); }
+
+header { margin: 1.5rem 0 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; color: var(--accent); }
+h1 { font-family: var(--font-serif); font-weight: 600; font-size: 2.2rem; line-height: 1.3; margin: 0.4rem 0 0.2rem; }
+.name-alt { font-family: var(--font-serif); color: var(--text-muted); font-size: 1.05rem; }
+.role { margin-top: 1rem; color: var(--text-muted); }
+.contact { margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+
+section { margin-bottom: 2.6rem; }
+h2 {
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+p + p { margin-top: 0.8rem; }
+
+ul.plain { list-style: none; }
+ul.plain li { padding: 0.35rem 0 0.35rem 1.1rem; position: relative; }
+ul.plain li::before { content: ""; position: absolute; left: 0; top: 1.27rem; width: 6px; height: 1px; background: var(--accent); }
+
+.pub { padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.9rem; }
+.pub-title { font-family: var(--font-serif); font-weight: 600; line-height: 1.55; }
+.pub-meta { color: var(--text-muted); font-size: 0.92rem; margin-top: 0.3rem; }
+.pub-links { margin-top: 0.4rem; font-family: var(--font-mono); font-size: 0.82rem; }
+.pub-links a { margin-right: 1.1rem; }
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-dim); }
+
+@media (max-width: 600px) {
+  .wrapper { padding: 2rem 16px 3rem; }
+  h1 { font-size: 1.8rem; }
+  .pub { padding: 0.9rem 1rem; }
+}
